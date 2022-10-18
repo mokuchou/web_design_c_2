@@ -1,9 +1,8 @@
 *{
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     box-sizing: border-box;
     text-align: center;
 }
-
 
 .main{
     border: 1px solid #ccc;
@@ -12,6 +11,10 @@
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    background-color: #FFFFFF;
+}
+*:not(.main){
+    /* background-color: #42413C; */
 }
 .top{
     flex-basis: 100%;
@@ -23,6 +26,12 @@ flex-basis: 180px;
 }
 .top_right{
     flex-basis: calc(100% - 180px);
+    background-color: #00B0F0;
+    line-height: 90px;
+    font-size: 52px;
+    font-family: 標楷體;
+    color: #FFFFFF;
+    text-shadow: #333333 10px 10px 15px;
 }
 .menu{
     flex-basis: 100%;
@@ -31,6 +40,17 @@ flex-basis: 180px;
 }
 .menu a{
     flex-basis: calc(100% / 7);
+    background-color: #EEEEEE;
+    color: #000000;
+    text-decoration: none;
+    font-weight: normal;
+}
+.menu a:hover{
+    background-color: #FFFF00;
+    font-size: 14px;
+    color: #FF0000;
+    font-weight: bold;
+    line-height: 25px;
 }
 .content{
     flex-basis: 100%;
