@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <style>
+        body {
+            /* background-color: aqua; */
+        }
+
+        .content {
+            flex-basis: 100%;
+            height: calc(100% - 90px - 25px - 45px);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #FFFFFF;
+            font-size: 14px;
+            color: #000000;
+            padding: 20px;
+        }
+
+        .news,
+        .content_right {
+            border: 1px solid #999999;
+        }
+
+        .news {
+            flex-basis: 280px;
+            height: 460px;
+        }
+
+        .news_title {
+            font-size: 16px;
+            font-weight: bolder;
+            text-align: left;
+            margin: 15px;
+        }
+        .news table{
+            margin: auto;
+            width: 95%;
+        }
+        .news th {
+            background-color: #3399FF;
+            font-size: 14px;
+            color: #FFFFFF;
+            line-height: 28px;
+        }
+        .news th:nth-of-type(odd){
+            width: 75%;
+        }
+
+        .news td {
+            font-size: 12px;
+            line-height: 24px;
+        }
+        .news tr:nth-of-type(odd){
+            background-color: #DDDDDD;
+        }
+        .news tr:nth-of-type(even){
+            background-color: #FFFFCC;
+        }
+        .news td:nth-of-type(even){
+            text-align: center;
+        }
+
+        .content_right {
+            flex-basis: 590px;
+            height: 460px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="content">
+        <div class="news">
+            <div class="news_title">
+                最新消息
+            </div>
+            <table>
+                <tr>
+                    <th>主題</th>
+                    <th>發布日期</th>
+                </tr>
+                <tr>
+                    <td><img src="../images/0201.png" alt="">公告全國技能競賽相關事宜</td>
+                    <td>111/10/18</td>
+                </tr>
+                <tr>
+                    <td><img src="../images/0201.png" alt="">公告即測即評及發證相關事宜</td>
+                    <td>111/10/18</td>
+                </tr>
+                <tr>
+                    <td><img src="../images/0201.png" alt="">公告網頁設計修題相關事宜</td>
+                    <td>111/10/18</td>
+                </tr>
+                <tr>
+                    <td><img src="../images/0201.png" alt="">公告網路架設應檢相關事宜</td>
+                    <td>111/10/18</td>
+                </tr>
+            </table>
+        </div>
+        <div class="content_right">
+            content_right
+        </div>
+    </section>
+</body>
+
+</html>
