@@ -70,6 +70,20 @@
         .content_right {
             flex-basis: 590px;
             height: 460px;
+            background-color: #333333;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        iframe{
+            flex-basis: 95%;
+            height: 300px;
+            object-fit: contain;
+        }
+        .sPhoto img{
+            flex-basis: 120px;
+            height: 80px;
         }
     </style>
 
@@ -105,7 +119,16 @@
             </table>
         </div>
         <div class="content_right">
-            content_right
+            <!-- content_right -->
+            <iframe src="../images/0202A.png" frameborder="0" name="myPhoto"></iframe>
+            <a class="sPhoto" href="../images/0202A.png" target="myPhoto"><img src="../images/0202B.png" alt=""></a>
+            <a class="sPhoto" href="../images/0203A.png" target="myPhoto"><img src="../images/0203B.png" alt=""></a>
+            <a class="sPhoto" href="../images/0204A.png" target="myPhoto"><img src="../images/0204B.png" alt=""></a>
+            <a class="sPhoto" href="../images/0205A.png" target="myPhoto"><img src="../images/0205B.png" alt=""></a>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
         </div>
     </section>
 </body>
