@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首頁</title>
     <style>
-        body {
-            /* background-color: aqua; */
+        * {
+            box-sizing: border-box;
         }
 
         .content {
@@ -39,17 +39,20 @@
             text-align: left;
             margin: 15px;
         }
-        .news table{
+
+        .news table {
             margin: auto;
             width: 95%;
         }
+
         .news th {
             background-color: #3399FF;
             font-size: 14px;
             color: #FFFFFF;
             line-height: 28px;
         }
-        .news th:nth-of-type(odd){
+
+        .news th:nth-of-type(odd) {
             width: 75%;
         }
 
@@ -57,13 +60,16 @@
             font-size: 12px;
             line-height: 24px;
         }
-        .news tr:nth-of-type(odd){
+
+        .news tr:nth-of-type(odd) {
             background-color: #DDDDDD;
         }
-        .news tr:nth-of-type(even){
+
+        .news tr:nth-of-type(even) {
             background-color: #FFFFCC;
         }
-        .news td:nth-of-type(even){
+
+        .news td:nth-of-type(even) {
             text-align: center;
         }
 
@@ -71,19 +77,55 @@
             flex-basis: 590px;
             height: 460px;
             background-color: #333333;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-items: center;
+            /* display: flex; */
+            /* flex-wrap: wrap; */
+            position: relative;
         }
-        iframe{
-            flex-basis: 95%;
-            height: 300px;
-            object-fit: contain;
+        label{
+            font-size: 14px;
+            color: #FFFF00;
         }
-        .sPhoto img{
-            flex-basis: 120px;
-            height: 80px;
+        .l_photo{
+            width: 570px;
+            height: 350px;
+            display: none;
+            position: absolute;
+            top: 5px;
+            left: 10px;
+        }
+        .l_photo img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .content_right input{
+            display: none;
+        }
+        .content_right label{
+            position: absolute;
+            bottom: 0px;
+            text-align: center;
+        }
+        #label_p2{
+            left: 15px;
+        }
+        #label_p3{
+            left: calc(15px + 146px * 1);
+        }
+        #label_p4{
+            left: calc(15px + 146px * 2);
+        }
+        #label_p5{
+            left: calc(15px + 146px * 3);
+        }
+        
+        input:checked+label+div{
+            display:block;
+        }
+
+        .txt {
+            font-size: 14px;
+            color: #FFFF00;
         }
     </style>
 
@@ -120,15 +162,22 @@
         </div>
         <div class="content_right">
             <!-- content_right -->
-            <iframe src="../images/0202A.png" frameborder="0" name="myPhoto"></iframe>
-            <a class="sPhoto" href="../images/0202A.png" target="myPhoto"><img src="../images/0202B.png" alt=""></a>
-            <a class="sPhoto" href="../images/0203A.png" target="myPhoto"><img src="../images/0203B.png" alt=""></a>
-            <a class="sPhoto" href="../images/0204A.png" target="myPhoto"><img src="../images/0204B.png" alt=""></a>
-            <a class="sPhoto" href="../images/0205A.png" target="myPhoto"><img src="../images/0205B.png" alt=""></a>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <input type="radio" class="s_photo" name="p2" id="p2" checked>
+            <label for="p2" id="label_p2"><img src="../images/0202B.png" alt=""><br>第30屆倫敦奧運</label>
+            <div class="l_photo"><img src="../images/0202A.png" alt=""></div>
+
+            <input type="radio" class="s_photo" name="p3" id="p3">
+            <label for="p3" id="label_p3"><img src="../images/0203B.png" alt=""><br>許淑淨奪舉重銀牌</label>
+            <div class="l_photo"><img src="../images/0203A.png" alt=""></div>
+
+            <input type="radio" class="s_photo" name="p4" id="p4">
+            <label for="p4" id="label_p4"><img src="../images/0204B.png" alt=""><br>第26屆深圳世大運</label>
+            <div class="l_photo"><img src="../images/0204A.png" alt=""></div>
+
+            <input type="radio" class="s_photo" name="p5" id="p5">
+            <label for="p5" id="label_p5"><img src="../images/0205B.png" alt=""><br>第27屆喀山世大運</label>
+            <div class="l_photo"><img src="../images/0205A.png" alt=""></div>
+
         </div>
     </section>
 </body>
